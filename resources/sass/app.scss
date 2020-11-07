@@ -1,0 +1,38 @@
+// Fonts
+@import url('https://fonts.googleapis.com/css?family=Nunito');
+
+
+//sweetalert2
+@import "~sweetalert2/src/sweetalert2";
+
+
+//theme
+@import "../theme/scss/app-modern-dark";
+@import "../theme/scss/custom/plugins/icons/materialdesignicons";
+@import "../theme/scss/custom/plugins/icons/dripicons";
+@import "../theme/scss/custom/plugins/icons/unicons";
+
+// Variables
+@import 'variables';
+@import 'typography';
+@import 'responsive';
+@import '_buttons';
+@import 'custom';
+//@import 'spacing';
+
+// DataTables
+@import "~datatables.net-bs4/css/dataTables.bootstrap4.css";
+@import "~datatables.net-buttons-bs4/css/buttons.bootstrap4.css";
+
+//pretty-checkbo
+@import '~pretty-checkbox/src/pretty-checkbox.scss';
+
+
+//fontawesome
+//$fa-font-path:        "../webfonts";
+//@import "~@fortawesome/fontawesome-free/scss/fontawesome.scss";
+//@import "~@fortawesome/fontawesome-free/scss/solid.scss";
+//@import "~@fortawesome/fontawesome-free/scss/brands.scss";
+
+
+

@@ -1,0 +1,43 @@
+.edit-avatar {
+    padding: 5px;
+    border-radius: 100%;
+    padding: 10px 14px;
+    right: -17px;
+    top: -3px;
+    background-color: #a5a5a5;
+    cursor: pointer;
+
+    &:hover {
+        border: solid 2px #232a3b;
+        transition: all 0.2s ease-in-out;
+    }
+
+}
+
+
+.btn-radius {
+    width: 8% !important;
+    border-radius: 8px;
+}
+
+
+.tables-hover-effect > tbody> tr:hover {
+    background-color: #313a55;
+
+}
+
+
+.custom-select {
+    margin-right: 20px;
+}
+
+
+.datatable-25 {
+    width: 25% !important;
+}
+
+
+.datatable-10 {
+    width: 10% !important;
+}
+
