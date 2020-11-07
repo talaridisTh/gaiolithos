@@ -21,7 +21,7 @@ class UserSeeder extends Seeder
             'name' => 'admin',
             'email' => "admin@gmail.com",
             'phone' => 6946989698,
-            'description' => "Description of User ",
+            'profile' => "Description of User ",
             'avatar' => "/images/avatar-placeholder.png",
             "slug" => 'admin',
             'password' => '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', // password
@@ -29,6 +29,9 @@ class UserSeeder extends Seeder
         ])->assignRole("admin");
 
 
-        User::factory()->times(20)->create();
+        $users = User::factory()->times(20)->create();
+        foreach($users as $user){
+            $user->assignRole("user");
+        }
     }
 }

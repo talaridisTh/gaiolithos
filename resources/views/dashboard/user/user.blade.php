@@ -7,12 +7,12 @@
 @section("content")
     <div class="container-fluid mt-4">
         <form
-            @if(request()->route()->getName()=="user.store")
-            {{route('user.show')}}
-            method="PUT"
-            @else
-            {{route('user.create')}}
+            @if(request()->route()->getName()=="user.create")
+            action="{{route('user.store')}}"
             method="POST"
+            @else
+            action="{{route('user.show')}}"
+            method="PUT"
             @endif
             id="form-user-create"
             enctype="multipart/form-data"
@@ -49,7 +49,7 @@
                                    class="form-control  @error('last_name') border-danger @enderror"
                                    name="last_name"
                                    placeholder="Εισάγετε επίθετο.."
-                                   value="{{ old('last_name') != "" ? old('last_name') : "" }}"
+                                   value="{{isset($user)?$user->last_name: (old('last_name') != "" ? old('last_name') : "" )}}"
                                    form="form-user-create"
                             >
                             @error("last_name")
@@ -68,7 +68,7 @@
                                        class="form-control  @error('email') border-danger @enderror"
                                        name="email"
                                        placeholder="Εισάγετε email.."
-                                       value="{{ old('email') != "" ? old('email') : "" }}"
+                                       value="{{isset($user)?$user->email: (old('email') != "" ? old('email') : "" )}}"
                                        form="form-user-create"
                                 >
                             </div>
@@ -84,7 +84,7 @@
                                    class="form-control  @error('phone') border-danger @enderror "
                                    name="phone"
                                    placeholder="Εισάγετε τηλεφωνώ.."
-                                   value="{{ old('phone') != "" ? old('phone') : "" }}"
+                                   value="{{isset($user)?$user->phone: (old('phone') != "" ? old('phone') : "" )}}"
                                    form="form-user-create"
                             >
                             @error("phone")
@@ -99,7 +99,9 @@
                                 class="form-control @error('profile') border-danger @enderror"
                                 name="profile"
                                 placeholder="Εισάγετε πληροφορίες"
-                                rows="5"></textarea>
+                                rows="5">
+                                {{isset($user)?$user->profile: (old('profile') != "" ? old('profile') : "" )}}"
+                            </textarea>
                             @error("profile")
                             <div class="invalid-feedback d-block">{{$message}}</div>
                             @enderror
@@ -124,7 +126,9 @@
                             >
                                 @foreach($roles as  $role)
                                     <option
-                                        {{$role->id==2?"selected":""}} value="{{$role->id}}">{{$role->name}}</option>
+                                        {{isset($user)?($user->getRoleNames()[0]==$role->name?"selected":""):($role->id==2?"selected":"")}}
+                                        value="{{$role->id}}">{{$role->name}}
+                                    </option>
                                 @endforeach
                             </select>
                             @error("role")
@@ -198,6 +202,7 @@
                                    id="user-status"
                                    data-switch="primary"
                                    form="form-user-create"
+                                {{isset($user)?($user->status==1?"checked":""):""}}
                             />
                             <label for="user-status" data-on-label="On" data-off-label="Off"></label>
                         </div> <!-- END: Status -->
@@ -206,7 +211,9 @@
                             <div class="d-inline-block position-relative">
                                 <img height="150" src="https://via.placeholder.com/200" alt="image"
                                      class="img-fluid rounded">
-                                <i class="dripicons-pencil position-absolute edit-avatar"></i>
+                                <span data-toggle="modal" data-target="#user-upload" class="position-absolute edit-avatar js-file-uploader"> <i
+                                        class="dripicons-pencil "></i>
+                                </span>
                             </div>
                         </div> <!-- END: Avatar -->
 
@@ -216,6 +223,8 @@
         </div>
     </div>
 
+
+    <x-file-upload uploadName='user-upload'></x-file-upload>
 @endsection
 
 @section("script")

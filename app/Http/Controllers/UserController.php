@@ -10,6 +10,7 @@ use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Str;
 use Spatie\Permission\Models\Role;
 use Yajra\DataTables\DataTables;
+use function App\Helpers\greekToEnglish;
 
 class UserController extends Controller {
 
@@ -22,6 +23,10 @@ class UserController extends Controller {
 
     public function create()
     {
+
+
+
+
         return view("dashboard.user.user", [
             "roles" => Role::all()
         ]);
@@ -29,6 +34,7 @@ class UserController extends Controller {
 
     public function store(UserCreateRequest $request)
     {
+
 
         $user = new User([
             "name" => $request->first_name . "-" . $request->last_name,
@@ -38,7 +44,6 @@ class UserController extends Controller {
             "profile" => $request->profile,
             "password" => Hash::make($request->password),
             "phone" => $request->phone,
-            "description" => $request->description,
             "slug" => Str::slug($request->first_name . $request->last_name, "-"),
             "status" => $request->status ? 1 : 0,
             "avatar" => "replaceMe"

@@ -20,7 +20,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="fa5a3e8d-059a-462a-94ea-73893ab73ff2" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/resources/views/components/file-upload.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/gaiolithos.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gaiolithos.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Helpers/helpers.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Helpers/helpers.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/UserController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/UserController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/seeders/UserSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/seeders/UserSeeder.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/dashboard/user/user.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/dashboard/user/user.blade.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -35,13 +44,18 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="JavaScript File" />
-        <option value="Blade" />
         <option value="tsconfig.json" />
+        <option value="Blade" />
       </list>
     </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="JsbtTreeLayoutManager">
+    <layout place="tools.popupnpm">
+      <scroll-view-position x="0" y="0" />
+    </layout>
   </component>
   <component name="PhpWorkspaceProjectConfiguration">
     <include_path>
@@ -167,6 +181,12 @@
       <path value="$PROJECT_DIR$/vendor/phpoffice/phpspreadsheet" />
       <path value="$PROJECT_DIR$/vendor/markbaker/complex" />
       <path value="$PROJECT_DIR$/vendor/markbaker/matrix" />
+      <path value="$PROJECT_DIR$/vendor/spatie/image" />
+      <path value="$PROJECT_DIR$/vendor/spatie/temporary-directory" />
+      <path value="$PROJECT_DIR$/vendor/spatie/laravel-medialibrary" />
+      <path value="$PROJECT_DIR$/vendor/spatie/image-optimizer" />
+      <path value="$PROJECT_DIR$/vendor/intervention/image" />
+      <path value="$PROJECT_DIR$/vendor/league/glide" />
     </include_path>
   </component>
   <component name="ProjectId" id="1jpBCYC1YaBlmQ3y0duTjLZchvo" />
@@ -180,7 +200,7 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/resources/theme/js/vendor" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../web-developer/laravel-project/lmsdemo" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
     <property name="vue.rearranger.settings.migration" value="true" />
@@ -229,7 +249,8 @@
       <workItem from="1604580638540" duration="3704000" />
       <workItem from="1604600988635" duration="7767000" />
       <workItem from="1604654056657" duration="40892000" />
-      <workItem from="1604739024992" duration="1102000" />
+      <workItem from="1604739024992" duration="3971000" />
+      <workItem from="1604783670318" duration="4762000" />
     </task>
     <servers />
   </component>
@@ -279,10 +300,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="184" y="86" key="DiffContextDialog/1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1604572364443" />
-    <state x="740" y="275" key="FileChooserDialogImpl" timestamp="1604584371120">
+    <state x="740" y="275" key="FileChooserDialogImpl" timestamp="1604744539570">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="740" y="275" key="FileChooserDialogImpl/1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1604584371120" />
+    <state x="740" y="275" key="FileChooserDialogImpl/1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1604744539570" />
     <state width="1921" height="305" key="GridCell.Tab.0.bottom" timestamp="1604668530863">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -323,18 +344,22 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="777" y="434" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1604582783351" />
-    <state x="275" y="128" width="1410" height="659" key="find.popup" timestamp="1604716137195">
+    <state x="275" y="128" width="1410" height="659" key="find.popup" timestamp="1604784364685">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="275" y="128" width="1410" height="659" key="find.popup/1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1604716137195" />
+    <state x="275" y="128" width="1410" height="659" key="find.popup/1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1604784364685" />
+    <state x="826" y="386" width="250" height="278" key="jetbrains.javascript.buildTools.run-task-popup" timestamp="1604744547226">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="826" y="386" width="250" height="278" key="jetbrains.javascript.buildTools.run-task-popup/1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1604744547226" />
     <state x="616" y="240" width="672" height="677" key="run.anything.popup" timestamp="1604670577137">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="616" y="240" width="672" height="677" key="run.anything.popup/1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1604670577137" />
-    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup" timestamp="1604717713237">
+    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup" timestamp="1604787310266">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup/1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1604717713237" />
+    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup/1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1604787310266" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
