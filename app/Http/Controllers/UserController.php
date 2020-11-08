@@ -3,7 +3,6 @@
 namespace App\Http\Controllers;
 
 use App\Http\Requests\UserCreateRequest;
-use App\Http\Requests\UserRequestCreate;
 use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Hash;
@@ -14,6 +13,15 @@ use function App\Helpers\greekToEnglish;
 
 class UserController extends Controller {
 
+    public function test(Request  $request)
+    {
+
+
+        $name = $request->file("files")[0];
+        $user = new User();
+        $user->addMedia($name)->toMediaCollection('images');
+
+    }
     public function index()
     {
 
@@ -24,9 +32,6 @@ class UserController extends Controller {
     public function create()
     {
 
-
-
-
         return view("dashboard.user.user", [
             "roles" => Role::all()
         ]);
@@ -35,6 +40,10 @@ class UserController extends Controller {
     public function store(UserCreateRequest $request)
     {
 
+        $user = auth()->user();
+        $user->addMedia($request->avatar)->toMediaCollection();
+
+        return redirect()->back();
 
         $user = new User([
             "name" => $request->first_name . "-" . $request->last_name,
@@ -46,8 +55,11 @@ class UserController extends Controller {
             "phone" => $request->phone,
             "slug" => Str::slug($request->first_name . $request->last_name, "-"),
             "status" => $request->status ? 1 : 0,
-            "avatar" => "replaceMe"
+
         ]);
+
+
+
         $user->save();
 
         return redirect()->back();

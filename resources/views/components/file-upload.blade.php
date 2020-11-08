@@ -26,7 +26,8 @@
 
                 <div class="tab-content">
                     <div class="tab-pane show active" id="profile">
-                        <p>...</p>
+                        <div id="select-files"></div>
+
                     </div>
                     <div class="tab-pane" id="settings">
                         <p>...</p>

@@ -44,3 +44,9 @@ Route::post("/user/store",[UserController::class,"store"])->name("user.store");
 Route::get("/user-main/datatable",[UserAjaxController::class,"initDatatableUser"])->name("test.user.datatable"); //datatable User Main Init
 
 
+
+Route::post("/test",[UserController::class,"test"])->name("test");
+
+
+
+

@@ -15,3 +15,5 @@ require('datatables.net-buttons-bs4');
 //theme
 require('../theme/js/app');
 
+// Import the plugins
+

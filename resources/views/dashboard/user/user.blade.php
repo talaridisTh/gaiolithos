@@ -222,13 +222,15 @@
             </div>
         </div>
     </div>
-
-
     <x-file-upload uploadName='user-upload'></x-file-upload>
 @endsection
 
 @section("script")
+    <script src="https://releases.transloadit.com/uppy/v1.22.0/uppy.min.js"></script>
 
     <script src="{{mix("js/dashboard/user/user.js")}}"></script>
+
+
+
 @endsection
 

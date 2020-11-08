@@ -20,16 +20,21 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="fa5a3e8d-059a-462a-94ea-73893ab73ff2" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/resources/views/components/file-upload.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/gaiolithos.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gaiolithos.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Helpers/helpers.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Helpers/helpers.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/UserController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/UserController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Models/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/User.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/seeders/UserSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/seeders/UserSeeder.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/css/app.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/css/app.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/js/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/app.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/js/dashboard/user/user.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/dashboard/user/user.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/app.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/dashboard/user/user.js" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/dashboard/user/user.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/sass/app.scss" beforeDir="false" afterPath="$PROJECT_DIR$/resources/sass/app.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/components/file-upload.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/components/file-upload.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/dashboard/user/user.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/dashboard/user/user.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -250,7 +255,7 @@
       <workItem from="1604600988635" duration="7767000" />
       <workItem from="1604654056657" duration="40892000" />
       <workItem from="1604739024992" duration="3971000" />
-      <workItem from="1604783670318" duration="4762000" />
+      <workItem from="1604783670318" duration="17568000" />
     </task>
     <servers />
   </component>
@@ -320,10 +325,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="1921" height="305" key="GridCell.Tab.0.right/1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1604668530863" />
-    <state x="682" y="243" key="NewPhpClassDialog" timestamp="1604529110154">
+    <state x="682" y="243" key="NewPhpClassDialog" timestamp="1604800036434">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="682" y="243" key="NewPhpClassDialog/1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1604529110154" />
+    <state x="682" y="243" key="NewPhpClassDialog/1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1604800036434" />
     <state x="743" y="222" key="RollbackChangesDialog" timestamp="1604572365851">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -356,10 +361,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="616" y="240" width="672" height="677" key="run.anything.popup/1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1604670577137" />
-    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup" timestamp="1604787310266">
+    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup" timestamp="1604801316446">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup/1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1604787310266" />
+    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup/1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1604801316446" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
