@@ -3,6 +3,9 @@ window.axios = require('axios');
 window.axios.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';
 
 
+window._ = require('lodash');
+
+
 //sweetalert2 && toast
 import Swal from 'sweetalert2';
 window.Swal = Swal;

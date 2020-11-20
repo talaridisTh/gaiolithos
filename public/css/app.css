@@ -53247,6 +53247,10 @@ body[data-leftbar-theme="dark"] .side-nav .side-nav-forth-level li.active > a {
   transition: all 0.2s ease-in-out;
 }
 
+.modal-content {
+  background-color: #313a55 !important;
+}
+
 .btn-radius {
   width: 8% !important;
   border-radius: 8px;
@@ -53266,6 +53270,49 @@ body[data-leftbar-theme="dark"] .side-nav .side-nav-forth-level li.active > a {
 
 .datatable-10 {
   width: 10% !important;
+}
+
+.image_item {
+  position: relative;
+}
+
+.image_item {
+  text-align: center;
+}
+
+.image_item i {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  border-radius: 50%;
+  font-size: 34px;
+  color: black;
+  width: 60px;
+  height: 60px;
+  line-height: 60px;
+  background: #ffffff;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.15);
+  transform: translate(-50%, -50%) scale(0);
+  transition: all 300ms 0ms cubic-bezier(0.6, -0.28, 0.735, 0.045);
+}
+
+.image_item a {
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  position: absolute;
+}
+
+.image_item:hover img {
+  opacity: 0.3;
+  filter: grayscale(100%);
+}
+
+.image_item:hover i {
+  transform: translate(-50%, -50%) scale(1);
+  transition: all 300ms 100ms cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
 
 .pretty * {

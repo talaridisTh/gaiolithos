@@ -1,14 +1,14 @@
 import Uppy from '@uppy/core'
 import Dashboard from '@uppy/dashboard'
-
-const XHRUpload = require('@uppy/xhr-upload')
+import XHRUpload from '@uppy//xhr-upload'
+import {onPagination, toastAlert, axiosUpdateImage,mediaEventHandler} from "../main";  //min to svisw travaei ta function
 
 
 const uppy = Uppy({
     autoProceed: false,
     restrictions: {
         maxFileSize: 1000000,
-        maxNumberOfFiles: 3,
+        maxNumberOfFiles: 10,
         allowedFileTypes: ['image/*', 'video/*']
     }
 })
@@ -20,28 +20,35 @@ const uppy = Uppy({
         inline: true,
         target: '#select-files',
         theme: 'dark',
-        animateOpenClose: true
 
     })
+    .use(XHRUpload, {
+        headers: {
 
-uppy.use(XHRUpload, {
+            'X-CSRF-Token': $('meta[name="csrf-token"]').attr('content')
+        },
+        method: "POST",
+        formData: true,
+        fieldName: "media-file",
+        endpoint: '/upload',
+        getResponseData () {
+            return {} // just empty
+        }
 
-    headers: {
-        'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
-    },
-    method:"POST",
-    endpoint: '/test',
-    // bundle:true,
-    formData: true,
-    fieldName: 'files[]',
-    metaFields: ['caption'],
+
+    })
+uppy.on('file-added', (file) => {
+    uppy.setFileMeta(file.id, {
+        model: "user"
+    })
 })
+uppy.on('complete', async result => {
 
+    const {data}  = await axios.get(window.location.href)
 
+    $(".js-image-cnt").html($(data).find('.js-image-cnt > *'))
+    mediaEventHandler()
 
-uppy.on('complete', result => {
-    console.log('successful files:', result.successful)
-    console.log('failed files:', result.failed)
 })
 
 
@@ -79,4 +86,8 @@ $(".js-strong-password").on("input", function (e) {
 
 
 })
+
+mediaEventHandler();
+
+
 

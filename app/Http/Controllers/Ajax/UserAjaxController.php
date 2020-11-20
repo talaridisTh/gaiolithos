@@ -30,20 +30,20 @@ class UserAjaxController extends Controller {
                 $checked = $data->status ? "checked" : "";
 
                 return (
-                "<input type='checkbox' $data->status $checked id='switch-status-{$data->slug}' data-switch='user_$data->id' class='js-switch'  data-switch='bool'/>
+                    "<input type='checkbox' $data->status $checked id='switch-status-{$data->slug}' data-switch='user_$data->id' class='js-switch'  data-switch='bool'/>
                      <label for='switch-status-{$data->slug}'  data-on-label='On' data-off-label='Off'></label>"
                 );
             })
             ->editColumn('action', function ($data) {
                 return ("
-                <a href='/show/$data->id' class='action-icon text-info'> <i class='mdi mdi-pencil'></i></a>
-                 <a href='javascript: void(0);' data-delete='user_$data->id' class='action-icon js-delete-datatable text-danger'> <i class='mdi mdi-delete'></i></a>
+                    <a href='/show/$data->id' class='action-icon text-info'> <i class='mdi mdi-pencil'></i></a>
+                    <a href='javascript: void(0);' data-delete='user_$data->id' class='action-icon js-delete-datatable text-danger'> <i class='mdi mdi-delete'></i></a>
                 ");
             })
             ->editColumn('created_at', function ($data) {
                 return $data->created_at->diffForHumans();
             })
-            ->rawColumns(['status', "checkbox","action"])
+            ->rawColumns(['status', "checkbox", "action"])
             ->make(true);
     }
 

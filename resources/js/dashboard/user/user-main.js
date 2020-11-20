@@ -1,6 +1,6 @@
 import {datatablelanguage} from "../../config.json"
 import {onCheckbox, onSwitchDatatable, onBulkAction, filterButton, onDeleteDatatable} from "../main";
-import select2 from "../../../theme/js/vendor/select2.min"
+import select2 from "../../../theme/js/vendor/select2.min"  //min svisti init gia select2
 
 /* Instal Datatables
   */

@@ -11,13 +11,16 @@
             action="{{route('user.store')}}"
             method="POST"
             @else
-            action="{{route('user.show')}}"
-            method="PUT"
+            action="{{route('user.update',$user->id)}}"
+            method="POST"
             @endif
             id="form-user-create"
             enctype="multipart/form-data"
             autocomplete="off">
             @csrf
+            @isset($user)
+                @method('PATCH')
+            @endisset
         </form>
 
         <div class="row">
@@ -99,8 +102,9 @@
                                 class="form-control @error('profile') border-danger @enderror"
                                 name="profile"
                                 placeholder="Εισάγετε πληροφορίες"
+                                form="form-user-create"
                                 rows="5">
-                                {{isset($user)?$user->profile: (old('profile') != "" ? old('profile') : "" )}}"
+                                {{isset($user)?$user->profile: (old('profile') != "" ? old('profile') : "" )}}
                             </textarea>
                             @error("profile")
                             <div class="invalid-feedback d-block">{{$message}}</div>
@@ -209,7 +213,7 @@
 
                         <div class="form-group text-center"> <!-- BEGIN: Avatar -->
                             <div class="d-inline-block position-relative">
-                                <img height="150" src="https://via.placeholder.com/200" alt="image"
+                                <img height="150" src="https://via.placeholder.com/200" id="model-cover" alt="user-avatar"
                                      class="img-fluid rounded">
                                 <span data-toggle="modal" data-target="#user-upload" class="position-absolute edit-avatar js-file-uploader"> <i
                                         class="dripicons-pencil "></i>
@@ -222,7 +226,7 @@
             </div>
         </div>
     </div>
-    <x-file-upload uploadName='user-upload'></x-file-upload>
+    <x-file-upload uploadName='user-upload'  :media=$media></x-file-upload> <!-- media library component -->
 @endsection
 
 @section("script")

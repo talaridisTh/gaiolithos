@@ -2,6 +2,7 @@
     "/js/app.js": "/js/app.js",
     "/css/app.css": "/css/app.css",
     "/js/dashboard/main/main.js": "/js/dashboard/main/main.js",
+    "/js/dashboard/role/role-main.js": "/js/dashboard/role/role-main.js",
     "/js/dashboard/user/user.js": "/js/dashboard/user/user.js",
     "/js/dashboard/user/user-main.js": "/js/dashboard/user/user-main.js"
 }

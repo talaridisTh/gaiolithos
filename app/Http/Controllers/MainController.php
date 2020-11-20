@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 
 use Illuminate\Http\Request;
+use Spatie\Permission\Models\Role;
 
 class MainController extends Controller
 {
@@ -11,6 +12,7 @@ class MainController extends Controller
 
     public function switch(Request  $request)
     {
+
 
         $nameSpace = "App\Models\\".ucfirst($request->model);
         $modelClass= new $nameSpace ;
@@ -23,12 +25,21 @@ class MainController extends Controller
 
     }
 
-    public function delete($data ,Request $request)
+    public function delete(Request $request)
     {
-        $nameSpace = "App\Models\\".ucfirst($request->model);
-        $modelClass= new $nameSpace ;
 
-        $modelClass->findOrFail($request->id)->delete();
+        if($request->model=="role"){
+
+             Role::findOrFail($request->id)->delete();
+
+        }else{
+            $nameSpace = "App\Models\\".ucfirst($request->model);
+            $modelClass= new $nameSpace ;
+
+            $modelClass->findOrFail($request->id)->delete();
+        }
+
+
 
     }
 

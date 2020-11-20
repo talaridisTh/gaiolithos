@@ -1,7 +1,10 @@
 <?php
 
 namespace App\Providers;
-
+use Illuminate\Pagination\Paginator;
+use Plank\Mediable\Facades\ImageManipulator;
+use Plank\Mediable\ImageManipulation;
+use Intervention\Image\Image;
 use Illuminate\Support\ServiceProvider;
 
 class AppServiceProvider extends ServiceProvider
@@ -24,5 +27,8 @@ class AppServiceProvider extends ServiceProvider
     public function boot()
     {
         //
+
+
+        Paginator::useBootstrap();
     }
 }

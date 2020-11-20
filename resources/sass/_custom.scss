@@ -14,6 +14,10 @@
 
 }
 
+.modal-content{
+    background-color: $custom-blue-100!important;
+}
+
 
 .btn-radius {
     width: 8% !important;
@@ -40,4 +44,55 @@
 .datatable-10 {
     width: 10% !important;
 }
+
+// Test Image Size //
+.image_item{
+    position : relative;
+
+}
+
+$color_1: black;
+$background_color_1: #000;
+
+.image_item {
+    text-align: center;
+
+    i {
+        cursor: pointer;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        border-radius: 50%;
+        font-size: 34px;
+        color: $color_1;
+        width: 60px;
+        height: 60px;
+        line-height: 60px;
+        background: #ffffff;
+        box-shadow: 0 0 5px rgba(0, 0, 0, 0.15);
+        -webkit-transform: translate(-50%, -50%) scale(0);
+        transform: translate(-50%, -50%) scale(0);
+        transition: all 300ms 0ms cubic-bezier(0.6, -0.28, 0.735, 0.045);
+    }
+    a {
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        position: absolute;
+    }
+    &:hover {
+        img {
+            opacity: 0.3;
+            -webkit-filter: grayscale(100%);
+            filter: grayscale(100%);
+        }
+        i {
+            -webkit-transform: translate(-50%, -50%) scale(1);
+            transform: translate(-50%, -50%) scale(1);
+            transition: all 300ms 100ms cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        }
+    }
+}
+
 

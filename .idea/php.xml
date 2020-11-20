@@ -113,7 +113,6 @@
       <path value="$PROJECT_DIR$/vendor/yajra/laravel-datatables-editor" />
       <path value="$PROJECT_DIR$/vendor/yajra/laravel-datatables-fractal" />
       <path value="$PROJECT_DIR$/vendor/yajra/laravel-datatables-html" />
-      <path value="$PROJECT_DIR$/vendor/yajra/laravel-datatables-oracle" />
       <path value="$PROJECT_DIR$/vendor/yajra/laravel-datatables" />
       <path value="$PROJECT_DIR$/vendor/maennchen/zipstream-php" />
       <path value="$PROJECT_DIR$/vendor/psr/http-factory" />
@@ -130,6 +129,7 @@
       <path value="$PROJECT_DIR$/vendor/spatie/image-optimizer" />
       <path value="$PROJECT_DIR$/vendor/intervention/image" />
       <path value="$PROJECT_DIR$/vendor/league/glide" />
+      <path value="$PROJECT_DIR$/vendor/yajra/laravel-datatables-oracle" />
     </include_path>
   </component>
   <component name="PhpProjectSharedConfiguration" php_language_level="7.3" />

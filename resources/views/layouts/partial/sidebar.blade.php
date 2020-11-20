@@ -29,9 +29,16 @@
         <li class="side-nav-title side-nav-item">Navigation</li>
 
         <li class="side-nav-item">
-            <a href="{{route('user.user.datatable')}}" class="side-nav-link">
+            <a href="{{route('user.index.datatable')}}" class="side-nav-link">
                 <i class="uil-home-alt"></i>
                 <span> User  <i class="far fa-edit"></i> </span>
+            </a>
+        </li>
+
+        <li class="side-nav-item">
+            <a href="{{route('role.index.datatable')}}" class="side-nav-link">
+                <i class="uil-home-alt"></i>
+                <span> Roles  </span>
             </a>
         </li>
 

@@ -15,6 +15,10 @@ const mix = require('laravel-mix');
 mix.js('resources/js/app.js', 'public/js')
     .js('resources/js/dashboard/user/user.js', 'public/js/dashboard/user')
     .js('resources/js/dashboard/user/user-main.js', 'public/js/dashboard/user')
+
+    .js('resources/js/dashboard/role/role-main.js', 'public/js/dashboard/role')
+
+
     .js('resources/js/dashboard/main.js', 'public/js/dashboard/main')
 
     .sass('resources/sass/app.scss', 'public/css')
